@@ -72,15 +72,11 @@ scanner.render(success, error);
 
 function success(result){
     console.log(result);
-    document.getElementById('result').innerHTML=`<h2>Success</h2>
-    <p><a href="${result}">${result}</a></p>`;
-    const info = document.getElementById('result').textContent;
-    result = info.replace(/^http:\/\//, '');
-    console.log(result);
-    fetch(result);
+    const param = result.replace(/^http:\/\//, '');
+    console.log(param);
+    fetch(param);
     scanner.clear();
     document.getElementById('reader').remove();
-
 }
 function error(err){
     console.error(err);
