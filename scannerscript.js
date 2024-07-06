@@ -75,6 +75,7 @@ function success(result){
     document.getElementById('result').innerHTML=`<h2>Success</h2>
     <p><a href="${result}">${result}</a></p>`;
     const info = document.getElementById('result').textContent;
+    result = info.replace(/^http:\/\//, '');
     console.log(result);
     fetch(result);
     scanner.clear();
