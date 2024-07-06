@@ -36,7 +36,7 @@ async function fetch(info) {
           if (userData && userData.doc == info) {
             console.log(userData.doc);
               console.log(`User ID: ${userID}, Email: ${info}`);
-              const nodePath = `nsproj/${userID}`;
+              const nodePath = `sockets/${userID}`;
               const newData = {
               doc: info,
               user: patientEmail
